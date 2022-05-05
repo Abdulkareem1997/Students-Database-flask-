@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>STUDENTS LIST</h2>
+
+<table>
+   <thead>
+      <td>Name</td>
+      <td>Address</td>
+      <td>city</td>
+      <td>Pincode</td>
+   </thead>
+   {% for row in rows %}
+      <tr>
+         <td>{{row["name"]}}</td>
+         <td>{{row["address"]}}</td>
+         <td> {{ row["city"]}}</td>
+         <td>{{row['pincode']}}</td>	
+      </tr>
+   {% endfor %}
+</table>
+<a href = "/">Go back to home page</a>
+<form action="/">
+   <input type="submit" value="Go back to home page" />
+</form>
+</body>
+</html>
